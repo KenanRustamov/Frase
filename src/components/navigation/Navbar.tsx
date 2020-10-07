@@ -1,5 +1,4 @@
 import React from 'react';
-import Flashcard from '../../components/learn/Flashcard';
 
 const Navbar: React.FC = () => {
     return (
