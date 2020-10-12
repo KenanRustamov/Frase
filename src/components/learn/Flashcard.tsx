@@ -3,10 +3,11 @@ import ReactCardFlip from "react-card-flip";
 
 import './Flashcard.css'
 import FlashcardSide from "./FlashcardSide";
+import UserResponse from "./UserResponse";
 
 const Flashcard: React.FC = () => {
 
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, setFlipped] = useState(true);
   const [frontText, setFrontText] = useState(`Hacerlo mal no importa: la es avanzar. Frase is an app that allows you
           to learn a language seamlessly and naturally through a
           spaced-repetition system.`)
@@ -32,6 +33,8 @@ const Flashcard: React.FC = () => {
         </FlashcardSide>
 
       </ReactCardFlip>
+
+      {flipped && <UserResponse />}
     </div>
   );
 };
