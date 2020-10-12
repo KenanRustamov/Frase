@@ -1,0 +1,22 @@
+.card {
+  perspective: 40rem;
+}
+
+.card-body {
+  transform-style: preserve-3d;
+  transition: 0.5s transform;
+}
+
+.card:hover {
+  transform: rotateX(-180deg);
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+}
+
+.card-back {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: rotateX(-180deg);
+}
