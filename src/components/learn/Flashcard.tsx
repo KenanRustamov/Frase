@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import ReactCardFlip from "react-card-flip";
 
 import './Flashcard.css'
+import FrontFlashcard from "./FrontFlashcard";
+import BackFlashCard from './BackFlashcard';
 
 const Flashcard: React.FC = () => {
 
@@ -11,17 +14,16 @@ const Flashcard: React.FC = () => {
   const [backText, setBackText] = useState(`The Answer`);
 
   return (
-    <div 
-      className="card flex justify-center rounded-md shadow-lg-full w-full h-full"
-      onClick={ () => setFlipped(!flipped) }>
-      <div className="card-body flex justify-items-start items-center w-full">
-        <div className={"card-front"}>
-          {frontText}
-        </div>
-        <div className={"card-back"}>
-          {backText}
-        </div>
-      </div>
+    <div>
+      <ReactCardFlip isFlipped={flipped} flipDirection="vertical">
+        <FrontFlashcard>
+          This is the front of the card.
+        </FrontFlashcard>
+
+        <BackFlashCard>
+          This is the back of the card.
+        </BackFlashCard>
+      </ReactCardFlip>
     </div>
   );
 };
