@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
 import './Flashcard.css'
-import FrontFlashcard from "./FrontFlashcard";
-import BackFlashCard from './BackFlashcard';
+import FlashcardSide from "./FlashcardSide";
 
 const Flashcard: React.FC = () => {
 
@@ -13,16 +12,25 @@ const Flashcard: React.FC = () => {
           spaced-repetition system.`)
   const [backText, setBackText] = useState(`The Answer`);
 
-  return (
-    <div>
-      <ReactCardFlip isFlipped={flipped} flipDirection="vertical">
-        <FrontFlashcard>
-          This is the front of the card.
-        </FrontFlashcard>
+  const toggleFlipped = () => {
+    setFlipped(!flipped)
+  }
 
-        <BackFlashCard>
-          This is the back of the card.
-        </BackFlashCard>
+  return (
+    <div className="w-full h-full">
+      <ReactCardFlip
+        isFlipped={flipped}
+        flipDirection="vertical"
+        containerStyle={{ height: "100%" }}
+      >
+        <FlashcardSide toggleFlipped={toggleFlipped}>
+          {frontText}
+        </FlashcardSide>
+
+        <FlashcardSide toggleFlipped={toggleFlipped}>
+          {backText}
+        </FlashcardSide>
+
       </ReactCardFlip>
     </div>
   );
