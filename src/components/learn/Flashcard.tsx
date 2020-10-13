@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
-import './Flashcard.css'
 import FlashcardSide from "./FlashcardSide";
 import UserResponse from "./UserResponse";
 

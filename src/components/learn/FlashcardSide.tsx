@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default function FlashcardSide({toggleFlipped, children}) {
+interface Props {
+    toggleFlipped: () => void
+}
+
+const FlashcardSide: React.FC<Props> = ({toggleFlipped, children}) => {
     return (
         <div className="rounded-md shadow-lg-full w-full h-full cursor-pointer" onClick={() => toggleFlipped()}>
             <div className="font-light text-4xl h-full flex justify-center items-center m-5">
@@ -9,3 +13,5 @@ export default function FlashcardSide({toggleFlipped, children}) {
         </div>
     )
 };
+
+export default FlashcardSide;
