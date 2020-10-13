@@ -2,15 +2,15 @@ import React from 'react'
 
 import Navbar from '../../components/navigation/Navbar';
 
-import { ReactComponent as Logo } from '../../assets/svg/connected-world.svg'
+// import { ReactComponent as Logo } from '../../assets/svg/connected-world.svg'
 
 const Landing: React.FC = () => {
     return (
       <React.Fragment>
         <Navbar />
-        <div className="flex bg-white overflow-hidden">
+        <div className="flex overflow-hidden">
           <div className="flex-1 max-w-screen-xl mx-auto">
-            <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-3xl lg:w-full lg:pb-28 xl:pb-32">
+            <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-3xl lg:w-full lg:pb-28 xl:pb-32">
               <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
@@ -44,9 +44,9 @@ const Landing: React.FC = () => {
               </main>
             </div>
           </div>
-          <div className="flex-1">
-            <Logo className="max-w-md mx-auto"/>
-          </div>
+          {/* <div className="flex-1"> */}
+            {/* <Logo className="max-w-md mx-auto"/> */}
+          {/* </div> */}
         </div>
       </React.Fragment>
     );
