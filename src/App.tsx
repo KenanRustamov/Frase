@@ -4,6 +4,7 @@ import Landing from "./pages/landing/Landing";
 import Learn from "./pages/learn/Learn";
 import "./assets/main.css";
 import Decks from "./pages/decks/Decks";
+import SignIn from "./pages/signin/Signin";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path="/decks">
           <Decks />
+        </Route>
+        <Route path="/signin">
+          <SignIn />
         </Route>
         <Route path="/">
           <Landing />
